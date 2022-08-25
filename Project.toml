@@ -1,0 +1,23 @@
+name = "TransformedLogDensities"
+uuid = "f9bc47f6-f3f8-4f3b-ab21-f8bc73906f26"
+authors = ["Tamás K. Papp <tkpapp@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+LogDensityProblems = "6fdf6af0-433a-55f7-b3ed-c6c6e0b8df7c"
+TransformVariables = "84d833dd-6860-57f9-a1a7-6da5db126cff"
+UnPack = "3a884ed6-31ef-47d7-9d2a-63182c4928ed"
+
+[compat]
+julia = "1"
+LogDensityProblems = "0.12"
+TransformVariables = "0.6"
+UnPack = "1, 2"
+
+[extras]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Distributions", "ForwardDiff", "Test"]
