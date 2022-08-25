@@ -1,7 +1,9 @@
-"""
-Placeholder for a short summary about TransformedLogDensities.
-"""
 module TransformedLogDensities
+
+@doc let path = joinpath(dirname(@__DIR__), "README.md")
+    include_dependency(path)
+    replace(read(path, String), "```julia" => "```jldoctest README")
+end TransformedLogDensities
 
 export TransformedLogDensity
 
