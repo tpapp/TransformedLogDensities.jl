@@ -2,6 +2,7 @@ using TransformedLogDensities, TransformVariables, Test, Distributions
 using LogDensityProblems: LogDensityProblems, capabilities, logdensity,
     logdensity_and_gradient, ADgradient, LogDensityOrder
 import ForwardDiff
+using LogDensityProblems: random_reals # needs to be imported explicitly
 
 @testset "-∞ log densities" begin
     t = as(Array, 2)
@@ -13,7 +14,7 @@ import ForwardDiff
     @test p.transformation ≡ parent(∇p).transformation ≡ t
 
     for _ in 1:100
-        x = random_arg(t)
+        x = random_reals(dimension(t))
         px = logdensity(∇p, x)
         px_∇px = logdensity_and_gradient(∇p, x)
         @test px isa Real
@@ -46,7 +47,7 @@ end
     @test parent(∇p).transformation ≡ t
 
     for _ in 1:100
-        x = random_arg(t)
+        x = random_reals(dimension(t))
         θ, lj = transform_and_logjac(t, x)
         px = logdensity(p, x)
         @test logpdf(d, θ.y) + lj ≈ (px::Real)
