@@ -1,6 +1,7 @@
 using TransformedLogDensities, TransformVariables, Test, Distributions
 using LogDensityProblems: LogDensityProblems, capabilities, logdensity,
-    logdensity_and_gradient, ADgradient, LogDensityOrder
+    logdensity_and_gradient, LogDensityOrder
+using LogDensityProblemsAD: ADgradient
 import ForwardDiff
 using LogDensityProblems: random_reals # needs to be imported explicitly
 
