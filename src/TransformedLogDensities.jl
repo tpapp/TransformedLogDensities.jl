@@ -9,7 +9,6 @@ export TransformedLogDensity
 
 import LogDensityProblems
 import TransformVariables
-using UnPack: @unpack
 
 """
     TransformedLogDensity(transformation, log_density_function)
@@ -52,7 +51,7 @@ function LogDensityProblems.dimension(p::TransformedLogDensity)
 end
 
 function LogDensityProblems.logdensity(p::TransformedLogDensity, x::AbstractVector)
-    @unpack transformation, log_density_function = p
+    (; transformation, log_density_function) = p
     TransformVariables.transform_logdensity(transformation, log_density_function, x)
 end
 
