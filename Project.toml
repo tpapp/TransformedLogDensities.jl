@@ -1,7 +1,7 @@
 name = "TransformedLogDensities"
 uuid = "f9bc47f6-f3f8-4f3b-ab21-f8bc73906f26"
 authors = ["Tamás K. Papp <tkpapp@gmail.com>"]
-version = "1.0.3"
+version = "1.1.0"
 
 [deps]
 LogDensityProblems = "6fdf6af0-433a-55f7-b3ed-c6c6e0b8df7c"
