@@ -1,7 +1,7 @@
 name = "TransformedLogDensities"
 uuid = "f9bc47f6-f3f8-4f3b-ab21-f8bc73906f26"
 authors = ["Tamás K. Papp <tkpapp@gmail.com>"]
-version = "1.1.0"
+version = "1.1.1"
 
 [deps]
 LogDensityProblems = "6fdf6af0-433a-55f7-b3ed-c6c6e0b8df7c"
@@ -9,7 +9,7 @@ TransformVariables = "84d833dd-6860-57f9-a1a7-6da5db126cff"
 
 [compat]
 LogDensityProblems = "1, 2"
-TransformVariables = "0.6, 0.7, 0.8, 0.9"
+TransformVariables = "0.6, 0.7, 0.8, 0.9, 1"
 julia = "1.10"
 
 [extras]
